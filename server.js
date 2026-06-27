@@ -2512,7 +2512,7 @@ Create a JSON response with this EXACT structure. Follow these rules strictly:
 
 Generate exactly ${days} days of activities. Make costs realistic integers in USD. Make location names specific for photo search. No explanatory text, just the JSON.`;
 
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
         const result = await model.generateContent(prompt);
         const response = await result.response;
         const geminiResponse = response.text();
@@ -3071,7 +3071,7 @@ INSTRUCTIONS:
 
 Please provide a helpful, specific response:`;
         
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
         const result = await model.generateContent(contextPrompt);
         const response = await result.response;
         aiResponse = response.text();
